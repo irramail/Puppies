@@ -1,0 +1,14 @@
+@()(implicit request: RequestHeader, flash: Flash)
+
+@main("Puppy List"){
+  <input type="hidden" id="csrfToken" value="@helper.CSRF.getToken.value">
+	<input type="hidden" id="validateRoute" value="@routes.PuppyTree.validate">
+  <input type="hidden" id="puppiesRoute" value="@routes.PuppyTree.puppyTree">
+	<input type="hidden" id="createRoute" value="@routes.PuppyTree.createUser">
+  <input type="hidden" id="logoutRoute" value="@routes.PuppyTree.logout">
+	<input type="hidden" id="deleteRoute" value="@routes.PuppyTree.delete">
+	<input type="hidden" id="addRoute" value="@routes.PuppyTree.addPuppy">
+
+  <div id="react-root"></div>
+  <script src="@routes.Assets.versioned("javascripts/version.js")"></script>
+}

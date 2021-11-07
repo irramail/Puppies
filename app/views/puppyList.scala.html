@@ -1,0 +1,10 @@
+@(puppies: Seq[String])
+
+@main("Puppy List") {
+    <h2>Puppy List</h2>
+    <ul>
+        @for(puppy <- puppies) {
+            <li>@puppy</li>
+        }
+    </ul>
+}
